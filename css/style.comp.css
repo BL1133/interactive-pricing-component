@@ -1,0 +1,83 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+.pricing-card {
+  width: 50rem;
+  height: 40rem;
+  background-color: white;
+  margin: 0 auto; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+
+body {
+  box-sizing: border-box;
+  background-color: #fafbff; }
+
+.container {
+  background: url(../../images/bg-pattern.svg) no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 8rem;
+  height: 20rem;
+  background: url(../../images/pattern-circles.svg) no-repeat center; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  text-transform: inherit; }
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  color: #858fad; }
+
+.heading-primary {
+  color: #293356;
+  font-size: 2.8rem; }
+
+.heading-secondary {
+  font-size: 2rem; }
