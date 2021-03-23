@@ -31,19 +31,12 @@ body {
 }
 .container {
   background: url(../../images/bg-pattern.svg) no-repeat;
+  background-size: 100vw 56vh;
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: 8rem;
-  height: 20rem;
-  background: url(../../images/pattern-circles.svg) no-repeat center;
 }
 ul {
   list-style: none;

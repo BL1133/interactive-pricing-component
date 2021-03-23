@@ -16,10 +16,119 @@ ORDER: Base + typography > general layout + grid > page layout > components
 1em = 16px
 */
 .pricing-card {
-  width: 50rem;
+  display: flex;
+  flex-direction: column;
+  width: 54.4rem;
   height: 40rem;
   background-color: white;
-  margin: 0 auto; }
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 3.4px 10px rgba(0, 0, 0, 0.035), 0 27px 80px rgba(0, 0, 0, 0.07); }
+  .pricing-card__main {
+    display: flex;
+    flex-direction: column; }
+  .pricing-card__cta {
+    display: flex;
+    border-top: 1px solid #eaeefb;
+    padding-top: 3rem; }
+
+.pricing__header {
+  display: flex;
+  justify-content: space-between; }
+
+.pricing__views {
+  align-self: center;
+  font-size: 1.37rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 800; }
+
+.pricing__price-container {
+  display: flex; }
+
+.pricing__price {
+  font-size: 3.8rem;
+  font-weight: 800;
+  color: #293356; }
+
+.pricing__price-month {
+  align-self: center;
+  font-size: 1.4rem;
+  margin-left: 1rem;
+  font-weight: 600;
+  letter-spacing: 2pz; }
+
+.pricing__footer {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 4rem;
+  gap: 2rem;
+  padding-bottom: 4rem; }
+
+.pricing__billing {
+  align-self: center;
+  font-size: 1.2rem; }
+
+.pricing__discount {
+  align-self: center; }
+
+.slider__container {
+  width: 100%;
+  padding-top: 3.3rem; }
+
+.slider {
+  width: 100%;
+  /* Full-width */ }
+
+/* The toggle-btn - the box around the toggle-btn__slider */
+.toggle-btn {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 22px; }
+
+/* Hide default HTML checkbox */
+.toggle-btn input {
+  opacity: 0;
+  width: 0;
+  height: 0; }
+
+/* The toggle-btn__slider */
+.toggle-btn__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 38px; }
+
+.toggle-btn__slider:before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%; }
+
+input:checked + .toggle-btn__slider {
+  background-color: #2196f3; }
+
+input:focus + .toggle-btn__slider {
+  box-shadow: 0 0 1px #2196f3; }
+
+input:checked + .toggle-btn__slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px); }
 
 *,
 *::after,
@@ -46,19 +155,12 @@ body {
 
 .container {
   background: url(../../images/bg-pattern.svg) no-repeat;
+  background-size: 100vw 56vh;
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center; }
-
-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: 8rem;
-  height: 20rem;
-  background: url(../../images/pattern-circles.svg) no-repeat center; }
 
 ul {
   list-style: none; }
@@ -80,4 +182,27 @@ body {
   font-size: 2.8rem; }
 
 .heading-secondary {
-  font-size: 2rem; }
+  font-size: 1.5rem;
+  font-weight: 600; }
+
+.u-margin-top-s {
+  margin-top: 1rem; }
+
+.u-padding-left-right-m {
+  padding-left: 4rem;
+  padding-right: 4rem; }
+
+.u-padding-top-m {
+  padding-top: 4rem; }
+
+.u-padding-bottom-m {
+  padding-bottom: 5rem; }
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  height: 20rem;
+  background: url(../../images/pattern-circles.svg) no-repeat center; }

@@ -1,6 +1,63 @@
 .pricing-card {
-  width: 50rem;
+  display: flex;
+  flex-direction: column;
+  width: 54.4rem;
   height: 40rem;
   background-color: $color-white;
   margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 3.4px 10px rgba(0, 0, 0, 0.035), 0 27px 80px rgba(0, 0, 0, 0.07);
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+  }
+  &__cta {
+    display: flex;
+    border-top: 1px solid $color-light-grayish-blue-empty;
+    padding-top: 3rem;
+  }
+}
+.pricing {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__views {
+    align-self: center;
+    font-size: 1.37rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+  }
+  &__price-container {
+    display: flex;
+  }
+  &__price {
+    font-size: 3.8rem;
+    font-weight: 800;
+    color: $color-dark-blue;
+  }
+  &__price-month {
+    align-self: center;
+    font-size: 1.4rem;
+    margin-left: 1rem;
+    font-weight: 600;
+    letter-spacing: 2pz;
+  }
+  &__footer {
+    padding-top: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 4rem;
+    gap: 2rem;
+    padding-bottom: 4rem;
+  }
+  &__billing {
+    align-self: center;
+    font-size: 1.2rem;
+  }
+  &__discount {
+    align-self: center;
+  }
 }
