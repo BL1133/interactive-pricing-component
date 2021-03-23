@@ -30,7 +30,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
   .pricing-card__cta {
     display: flex;
     border-top: 1px solid #eaeefb;
-    padding-top: 3rem; }
+    padding-top: 3.5rem;
+    justify-content: space-between; }
 
 .pricing__header {
   display: flex;
@@ -38,7 +39,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .pricing__views {
   align-self: center;
-  font-size: 1.37rem;
+  font-size: 1.35rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 800; }
@@ -49,21 +50,22 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .pricing__price {
   font-size: 3.8rem;
   font-weight: 800;
-  color: #293356; }
+  color: #293356;
+  align-self: center; }
 
 .pricing__price-month {
   align-self: center;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin-left: 1rem;
   font-weight: 600;
   letter-spacing: 2pz; }
 
 .pricing__footer {
-  padding-top: 3rem;
+  padding-top: 5rem;
   display: flex;
   justify-content: flex-end;
-  padding-right: 4rem;
-  gap: 2rem;
+  padding-right: 2rem;
+  gap: 1.6rem;
   padding-bottom: 4rem; }
 
 .pricing__billing {
@@ -71,7 +73,36 @@ ORDER: Base + typography > general layout + grid > page layout > components
   font-size: 1.2rem; }
 
 .pricing__discount {
+  align-self: center;
+  color: #ff8c66;
+  background-color: #feece7;
+  padding: 2px 7px 2px 7px;
+  border-radius: 20px;
+  transform: translateX(-8px); }
+
+.cta__features {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; }
+
+.cta__features-item {
+  display: flex; }
+
+.cta__features-check {
   align-self: center; }
+
+.cta__features-text {
+  font-size: 1.2rem;
+  padding-left: 1.5rem; }
+
+.cta__link {
+  align-self: center;
+  color: #bdccff;
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding: 12px 40px 12px 40px;
+  background-color: #293356;
+  border-radius: 20px; }
 
 .slider__container {
   width: 100%;
@@ -85,7 +116,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .toggle-btn {
   position: relative;
   display: inline-block;
-  width: 38px;
+  width: 42px;
   height: 22px; }
 
 /* Hide default HTML checkbox */
@@ -102,10 +133,10 @@ ORDER: Base + typography > general layout + grid > page layout > components
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #cdd7ee;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  border-radius: 38px; }
+  border-radius: 32px; }
 
 .toggle-btn__slider:before {
   position: absolute;
@@ -128,7 +159,7 @@ input:focus + .toggle-btn__slider {
 input:checked + .toggle-btn__slider:before {
   -webkit-transform: translateX(16px);
   -ms-transform: translateX(16px);
-  transform: translateX(16px); }
+  transform: translateX(20px); }
 
 *,
 *::after,
@@ -189,14 +220,14 @@ body {
   margin-top: 1rem; }
 
 .u-padding-left-right-m {
-  padding-left: 4rem;
-  padding-right: 4rem; }
+  padding-left: 4.5rem;
+  padding-right: 4.5rem; }
 
 .u-padding-top-m {
   padding-top: 4rem; }
 
 .u-padding-bottom-m {
-  padding-bottom: 5rem; }
+  padding-bottom: 4rem; }
 
 header {
   display: flex;

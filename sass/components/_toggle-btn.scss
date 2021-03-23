@@ -2,7 +2,7 @@
 .toggle-btn {
   position: relative;
   display: inline-block;
-  width: 38px;
+  width: 42px;
   height: 22px;
 }
 
@@ -21,10 +21,10 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: $color-grayish-blue-toggle;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  border-radius: 38px;
+  border-radius: 32px;
 }
 
 .toggle-btn__slider:before {
@@ -51,5 +51,5 @@ input:focus + .toggle-btn__slider {
 input:checked + .toggle-btn__slider:before {
   -webkit-transform: translateX(16px);
   -ms-transform: translateX(16px);
-  transform: translateX(16px);
+  transform: translateX(20px);
 }

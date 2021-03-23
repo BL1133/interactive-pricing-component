@@ -15,7 +15,8 @@
   &__cta {
     display: flex;
     border-top: 1px solid $color-light-grayish-blue-empty;
-    padding-top: 3rem;
+    padding-top: 3.5rem;
+    justify-content: space-between;
   }
 }
 .pricing {
@@ -25,7 +26,7 @@
   }
   &__views {
     align-self: center;
-    font-size: 1.37rem;
+    font-size: 1.35rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 800;
@@ -37,20 +38,21 @@
     font-size: 3.8rem;
     font-weight: 800;
     color: $color-dark-blue;
+    align-self: center;
   }
   &__price-month {
     align-self: center;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-left: 1rem;
     font-weight: 600;
     letter-spacing: 2pz;
   }
   &__footer {
-    padding-top: 3rem;
+    padding-top: 5rem;
     display: flex;
     justify-content: flex-end;
-    padding-right: 4rem;
-    gap: 2rem;
+    padding-right: 2rem;
+    gap: 1.6rem;
     padding-bottom: 4rem;
   }
   &__billing {
@@ -59,5 +61,38 @@
   }
   &__discount {
     align-self: center;
+    color: $color-light-red;
+    background-color: $color-light-grayish-red;
+    padding: 2px 7px 2px 7px;
+    border-radius: 20px;
+    transform: translateX(-8px);
+  }
+}
+
+.cta {
+  &__features {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  &__features-item {
+    display: flex;
+  }
+  &__features-check {
+    align-self: center;
+  }
+  &__features-text {
+    font-size: 1.2rem;
+    padding-left: 1.5rem;
+  }
+
+  &__link {
+    align-self: center;
+    color: $color-pale-blue;
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding: 12px 40px 12px 40px;
+    background-color: $color-dark-blue;
+    border-radius: 20px;
   }
 }
