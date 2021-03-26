@@ -42,18 +42,35 @@
       <article class="pricing-card">
         <div class="pricing-card__main u-padding-left-right-m u-padding-top-m">
           <div class="pricing__header">
-            <p class="pricing__views">100K Pageviews</p>
-            <div class="pricing__price-container">
-              <p class="pricing__price">$16.00</p>
+            <p class="pricing__views"></p>
+            <div
+              class="pricing__price-container"
+              data-price-input='{
+              "0": ["$", "4", "/ month"],
+              "1": ["$", "8", "/ month"],
+              "2": ["$", "16", "/ month"],
+              "3": ["$", "32", "/ month"],
+              "4": ["$", "64", "/ month"]
+            }'
+            >
+              <p class="pricing__price-currency">$</p>
+              <p class="pricing__price-amount">16.00</p>
               <p class="pricing__price-month">/ month</p>
             </div>
           </div>
           <div class="slider__container">
             <input
               type="range"
-              min="1"
-              max="100"
-              value="50"
+              data-price-input='{
+               "0": "25",
+               "1": "50",
+               "2": "100",
+               "3": "150",
+               "4": "200"
+              }'
+              min="0"
+              max="4"
+              value="2"
               class="slider"
               id="myRange"
             />
@@ -109,4 +126,5 @@
       </div>
     </div>
   </body>
+  <script src="./main.js"></script>
 </html>

@@ -47,8 +47,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .pricing__price-container {
   display: flex; }
 
-.pricing__price {
-  font-size: 3.8rem;
+.pricing__price-amount, .pricing__price-currency {
+  font-size: 3.75rem;
   font-weight: 800;
   color: #293356;
   align-self: center; }
@@ -92,7 +92,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   align-self: center; }
 
 .cta__features-text {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   padding-left: 1.5rem; }
 
 .cta__link {
@@ -109,8 +109,61 @@ ORDER: Base + typography > general layout + grid > page layout > components
   padding-top: 3.3rem; }
 
 .slider {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  appearance: none;
   width: 100%;
-  /* Full-width */ }
+  /* Full-width */
+  height: 8px;
+  /* Specified height */
+  background: #eaeefb;
+  /* Grey background */
+  outline: none;
+  /* Remove outline */
+  opacity: 0.7;
+  /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s;
+  /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s; }
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1;
+  /* Fully shown on mouse-over */ }
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 38px;
+  /* Set a specific slider handle width */
+  height: 38px;
+  /* Slider handle height */
+  border-radius: 50%;
+  background: #10d5c2;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+  background-image: url(../../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  backface-visibility: hidden; }
+
+.slider::-moz-range-thumb {
+  width: 38px;
+  /* Set a specific slider handle width */
+  height: 38px;
+  /* Slider handle height */
+  background: #10d5c2;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+  border-radius: 50%;
+  background-image: url(../../images/icon-slider.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  backface-visibility: hidden; }
 
 /* The toggle-btn - the box around the toggle-btn__slider */
 .toggle-btn {
@@ -151,10 +204,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   border-radius: 50%; }
 
 input:checked + .toggle-btn__slider {
-  background-color: #2196f3; }
-
-input:focus + .toggle-btn__slider {
-  box-shadow: 0 0 1px #2196f3; }
+  background-color: #cdd7ee; }
 
 input:checked + .toggle-btn__slider:before {
   -webkit-transform: translateX(16px);
