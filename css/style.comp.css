@@ -63,7 +63,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
     .pricing__price-container {
       order: 2;
       align-self: center;
-      padding-top: 2rem; } }
+      padding-top: 3rem; } }
 
 .pricing__price-amount, .pricing__price-currency {
   font-size: 3.75rem;
@@ -98,6 +98,14 @@ ORDER: Base + typography > general layout + grid > page layout > components
   padding: 2px 7px 2px 7px;
   border-radius: 20px;
   transform: translateX(-8px); }
+  @media only screen and (max-width: 37.5em) {
+    .pricing__discount--long {
+      display: none; } }
+  .pricing__discount--short {
+    display: none; }
+    @media only screen and (max-width: 37.5em) {
+      .pricing__discount--short {
+        display: inline; } }
 
 .cta__features {
   display: flex;
@@ -107,15 +115,17 @@ ORDER: Base + typography > general layout + grid > page layout > components
     .cta__features {
       align-self: center; } }
 
-.cta__features-item {
-  display: flex; }
-
-.cta__features-check {
-  align-self: center; }
-
 .cta__features-text {
   font-size: 1.25rem;
-  padding-left: 1.5rem; }
+  padding-left: 1.5rem;
+  text-align: center;
+  position: relative; }
+  .cta__features-text::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='8'%3E%3Cpath fill='none' stroke='%2310D8C4' stroke-width='2' d='M1 4.134l1.907 1.908L7.949 1'/%3E%3C/svg%3E");
+    display: inline-block;
+    font-size: inherit;
+    position: absolute;
+    transform: translateX(-2rem); }
 
 .cta__link {
   align-self: center;
