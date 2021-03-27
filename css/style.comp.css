@@ -32,10 +32,23 @@ ORDER: Base + typography > general layout + grid > page layout > components
     border-top: 1px solid #eaeefb;
     padding-top: 3.5rem;
     justify-content: space-between; }
+    @media only screen and (max-width: 37.5em) {
+      .pricing-card__cta {
+        flex-direction: column;
+        gap: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .pricing-card {
+      width: 86vw;
+      height: 60vh; } }
 
 .pricing__header {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  @media only screen and (max-width: 37.5em) {
+    .pricing__header {
+      flex-direction: column;
+      gap: 1.5rem; } }
 
 .pricing__views {
   align-self: center;
@@ -46,12 +59,18 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .pricing__price-container {
   display: flex; }
+  @media only screen and (max-width: 37.5em) {
+    .pricing__price-container {
+      order: 2;
+      align-self: center;
+      padding-top: 2rem; } }
 
 .pricing__price-amount, .pricing__price-currency {
   font-size: 3.75rem;
   font-weight: 800;
   color: #293356;
-  align-self: center; }
+  align-self: center;
+  letter-spacing: -1px; }
 
 .pricing__price-month {
   align-self: center;
@@ -84,6 +103,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
   display: flex;
   flex-direction: column;
   gap: 1rem; }
+  @media only screen and (max-width: 37.5em) {
+    .cta__features {
+      align-self: center; } }
 
 .cta__features-item {
   display: flex; }
@@ -106,7 +128,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .slider__container {
   width: 100%;
-  padding-top: 3.3rem; }
+  padding-top: 3.3rem;
+  order: 1; }
 
 .slider {
   -webkit-appearance: none;
@@ -241,7 +264,8 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
 
 ul {
   list-style: none; }

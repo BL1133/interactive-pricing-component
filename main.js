@@ -57,6 +57,7 @@ function handlePricingSlider(input, output) {
   }
 }
 handlePricingSlider(pricingInput, pricingOutput);
+
 pricingSlider.addEventListener('input', () => {
   handlePricingSlider(pricingInput, pricingOutput);
 });
