@@ -68,3 +68,14 @@ handlePricingSlider(pricingInput, pricingOutput);
 pricingSlider.addEventListener('input', () => {
   handlePricingSlider(pricingInput, pricingOutput);
 });
+
+// Progress for Slider
+document.querySelector('.slider').oninput = function () {
+  var value = ((this.value - this.min) / (this.max - this.min)) * 100;
+  this.style.background =
+    'linear-gradient(to right, hsl(174, 76%, 80%) 0%, hsl(174, 76%, 80%) ' +
+    value +
+    '%, hsl(224, 65%, 95%) ' +
+    value +
+    '%, hsl(224, 65%, 95%) 100%)';
+};

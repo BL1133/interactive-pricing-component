@@ -120,7 +120,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
     .pricing__billing {
       font-size: 1.5rem;
       text-align: center; } }
-  @media only screen and (max-width: 300px) {
+  @media only screen and (max-width: 315px) {
     .pricing__billing {
       white-space: initial;
       line-height: 2.5rem; } }
@@ -177,21 +177,19 @@ ORDER: Base + typography > general layout + grid > page layout > components
   /* Full-width */
   height: 8px;
   /* Specified height */
-  background: #eaeefb;
+  background: linear-gradient(to right, #a5f3eb 0%, #a5f3eb 50%, #eaeefb 50%, #eaeefb 100%);
   /* Grey background */
   outline: none;
   /* Remove outline */
-  opacity: 0.7;
+  opacity: 0.8;
   /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: 0.2s;
   /* 0.2 seconds transition on hover */
   transition: opacity 0.2s;
   border-radius: 40px; }
-
-/* Mouse-over effects */
-.slider:hover {
-  opacity: 1;
-  /* Fully shown on mouse-over */ }
+  .slider:hover {
+    opacity: 1;
+    /* Fully shown on mouse-over */ }
 
 /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
 .slider::-webkit-slider-thumb {
@@ -207,7 +205,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   cursor: grab;
   /* Cursor on hover */
   background: #10d5c2 url(../../images/icon-slider.svg) center no-repeat;
-  box-shadow: 0 10.6px 43.6px -5px rgba(36, 135, 160, 0.9), 0 85px 348px -5px #0c707e; }
+  box-shadow: 0 10.6px 43.6px -5px rgba(36, 135, 160, 0.86), 0 85px 348px -5px #0c707e; }
   .slider::-webkit-slider-thumb:active {
     cursor: grabbing; }
 
