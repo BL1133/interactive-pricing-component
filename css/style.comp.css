@@ -86,10 +86,26 @@ ORDER: Base + typography > general layout + grid > page layout > components
   padding-right: 2rem;
   gap: 1.6rem;
   padding-bottom: 4rem; }
+  @media only screen and (max-width: 37.5em) {
+    .pricing__footer {
+      justify-content: center;
+      padding-right: initial; } }
 
 .pricing__billing {
   align-self: center;
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  white-space: nowrap; }
+  .pricing__billing--yearly::after {
+    content: attr(discount) "% Discount";
+    align-self: center;
+    color: #ff8c66;
+    background-color: #feece7;
+    padding: 2px 7px 2px 7px;
+    border-radius: 20px;
+    transform: translateX(-8px); }
+    @media only screen and (max-width: 37.5em) {
+      .pricing__billing--yearly::after {
+        content: "-" attr(discount) "%"; } }
 
 .pricing__discount {
   align-self: center;
@@ -118,7 +134,6 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .cta__features-text {
   font-size: 1.25rem;
   padding-left: 1.5rem;
-  text-align: center;
   position: relative; }
   .cta__features-text::before {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='8'%3E%3Cpath fill='none' stroke='%2310D8C4' stroke-width='2' d='M1 4.134l1.907 1.908L7.949 1'/%3E%3C/svg%3E");
@@ -126,6 +141,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
     font-size: inherit;
     position: absolute;
     transform: translateX(-2rem); }
+  @media only screen and (max-width: 37.5em) {
+    .cta__features-text {
+      text-align: center; } }
 
 .cta__link {
   align-self: center;

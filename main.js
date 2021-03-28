@@ -22,6 +22,12 @@ pricingOutput.data = JSON.parse(pricingOutputEl.dataset.priceInput);
 
 // Discount
 const toggleBilling = document.querySelector('.toggle-btn input');
+// Change discountHTML to set discount message and to change the displayed pricing
+const discountHTML = 25;
+const discountPercentage = discountHTML * 0.01;
+const yearlyBilling = document.querySelector('.pricing__billing--yearly');
+yearlyBilling.setAttribute('discount', discountHTML);
+
 // Check billing input
 let stateBilling = 0;
 function checkBilling() {
@@ -50,7 +56,8 @@ function handlePricingSlider(input, output) {
     output.amount.innerHTML = output.data[input.el.value][1];
   } else if (output.amount && stateBilling == 1) {
     output.amount.innerHTML =
-      output.data[input.el.value][1] - output.data[input.el.value][1] * 0.25;
+      output.data[input.el.value][1] -
+      output.data[input.el.value][1] * discountPercentage;
   }
   if (output.month) {
     output.month.innerHTML = output.data[input.el.value][2];

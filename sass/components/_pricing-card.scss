@@ -76,10 +76,30 @@
     padding-right: 2rem;
     gap: 1.6rem;
     padding-bottom: 4rem;
+
+    @include respond(phone) {
+      justify-content: center;
+      padding-right: initial;
+    }
   }
   &__billing {
     align-self: center;
     font-size: 1.2rem;
+    white-space: nowrap;
+
+    &--yearly::after {
+      content: attr(discount) '% Discount';
+      align-self: center;
+      color: $color-light-red;
+      background-color: $color-light-grayish-red;
+      padding: 2px 7px 2px 7px;
+      border-radius: 20px;
+      transform: translateX(-8px);
+
+      @include respond(phone) {
+        content: '-' attr(discount) '%';
+      }
+    }
   }
 
   &__discount {
@@ -117,7 +137,6 @@
   &__features-text {
     font-size: 1.25rem;
     padding-left: 1.5rem;
-    text-align: center;
     position: relative;
 
     &::before {
@@ -126,6 +145,10 @@
       font-size: inherit;
       position: absolute;
       transform: translateX(-2rem);
+    }
+
+    @include respond(phone) {
+      text-align: center;
     }
   }
 
