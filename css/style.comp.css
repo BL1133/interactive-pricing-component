@@ -118,7 +118,12 @@ ORDER: Base + typography > general layout + grid > page layout > components
         margin-left: 3px; } }
   @media only screen and (max-width: 37.5em) {
     .pricing__billing {
-      font-size: 1.5rem; } }
+      font-size: 1.5rem;
+      text-align: center; } }
+  @media only screen and (max-width: 300px) {
+    .pricing__billing {
+      white-space: initial;
+      line-height: 2.5rem; } }
 
 .cta__features {
   display: flex;
