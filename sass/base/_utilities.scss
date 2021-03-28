@@ -4,9 +4,18 @@
 .u-padding-left-right-m {
   padding-left: 4.5rem;
   padding-right: 4.5rem;
+
+  @include respond(phone) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  @media only screen and (max-width: 340px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 .u-padding-top-m {
-  padding-top: 4rem;
+  padding-top: 4.2rem;
 }
 .u-padding-bottom-m {
   padding-bottom: 4rem;

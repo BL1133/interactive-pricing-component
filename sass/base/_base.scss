@@ -38,6 +38,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-height: 670px) {
+    height: initial;
+  }
 }
 ul {
   list-style: none;

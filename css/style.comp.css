@@ -19,18 +19,18 @@ ORDER: Base + typography > general layout + grid > page layout > components
   display: flex;
   flex-direction: column;
   width: 54.4rem;
-  height: 40rem;
+  height: 42.6rem;
   background-color: white;
   margin: 0 auto;
   border-radius: 8px;
-  box-shadow: 0 3.4px 10px rgba(0, 0, 0, 0.035), 0 27px 80px rgba(0, 0, 0, 0.07); }
+  box-shadow: 0 3.3px 3.7px rgba(0, 0, 0, 0.009), 0 8.3px 9.4px rgba(0, 0, 0, 0.013), 0 16.8px 19.1px rgba(0, 0, 0, 0.017), 0 34.7px 39.4px rgba(0, 0, 0, 0.021), 0 95px 108px rgba(0, 0, 0, 0.03); }
   .pricing-card__main {
     display: flex;
     flex-direction: column; }
   .pricing-card__cta {
     display: flex;
     border-top: 1px solid #eaeefb;
-    padding-top: 3.5rem;
+    padding-top: 3.9rem;
     justify-content: space-between; }
     @media only screen and (max-width: 37.5em) {
       .pricing-card__cta {
@@ -39,7 +39,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
   @media only screen and (max-width: 37.5em) {
     .pricing-card {
       width: 86vw;
-      height: 60vh; } }
+      height: 60rem; } }
+  @media only screen and (max-width: 360px) {
+    .pricing-card {
+      width: 93vw;
+      height: 62rem; } }
 
 .pricing__header {
   display: flex;
@@ -52,10 +56,13 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .pricing__views {
   align-self: center;
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 800; }
+  @media only screen and (max-width: 37.5em) {
+    .pricing__views {
+      font-size: 1.6rem; } }
 
 .pricing__price-container {
   display: flex; }
@@ -66,7 +73,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
       padding-top: 3rem; } }
 
 .pricing__price-amount, .pricing__price-currency {
-  font-size: 3.75rem;
+  font-size: 4rem;
   font-weight: 800;
   color: #293356;
   align-self: center;
@@ -76,24 +83,26 @@ ORDER: Base + typography > general layout + grid > page layout > components
   align-self: center;
   font-size: 1.5rem;
   margin-left: 1rem;
-  font-weight: 600;
-  letter-spacing: 2pz; }
+  font-weight: 600; }
+  @media only screen and (max-width: 37.5em) {
+    .pricing__price-month {
+      font-size: 1.7rem; } }
 
 .pricing__footer {
-  padding-top: 5rem;
+  padding: 5.5rem 1rem 4.5rem 0;
   display: flex;
   justify-content: flex-end;
-  padding-right: 2rem;
-  gap: 1.6rem;
-  padding-bottom: 4rem; }
+  gap: 1.5rem; }
   @media only screen and (max-width: 37.5em) {
     .pricing__footer {
       justify-content: center;
-      padding-right: initial; } }
+      transform: translateX(1.9rem);
+      padding-right: initial;
+      overflow: visible; } }
 
 .pricing__billing {
   align-self: center;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   white-space: nowrap; }
   .pricing__billing--yearly::after {
     content: attr(discount) "% Discount";
@@ -102,26 +111,14 @@ ORDER: Base + typography > general layout + grid > page layout > components
     background-color: #feece7;
     padding: 2px 7px 2px 7px;
     border-radius: 20px;
-    transform: translateX(-8px); }
+    margin-left: 8px; }
     @media only screen and (max-width: 37.5em) {
       .pricing__billing--yearly::after {
-        content: "-" attr(discount) "%"; } }
-
-.pricing__discount {
-  align-self: center;
-  color: #ff8c66;
-  background-color: #feece7;
-  padding: 2px 7px 2px 7px;
-  border-radius: 20px;
-  transform: translateX(-8px); }
+        content: "-" attr(discount) "%";
+        margin-left: 3px; } }
   @media only screen and (max-width: 37.5em) {
-    .pricing__discount--long {
-      display: none; } }
-  .pricing__discount--short {
-    display: none; }
-    @media only screen and (max-width: 37.5em) {
-      .pricing__discount--short {
-        display: inline; } }
+    .pricing__billing {
+      font-size: 1.5rem; } }
 
 .cta__features {
   display: flex;
@@ -132,18 +129,19 @@ ORDER: Base + typography > general layout + grid > page layout > components
       align-self: center; } }
 
 .cta__features-text {
-  font-size: 1.25rem;
-  padding-left: 1.5rem;
+  font-size: 1.3rem;
+  padding-left: 1.6rem;
   position: relative; }
   .cta__features-text::before {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='8'%3E%3Cpath fill='none' stroke='%2310D8C4' stroke-width='2' d='M1 4.134l1.907 1.908L7.949 1'/%3E%3C/svg%3E");
     display: inline-block;
     font-size: inherit;
     position: absolute;
-    transform: translateX(-2rem); }
+    transform: translateX(-2.3rem); }
   @media only screen and (max-width: 37.5em) {
     .cta__features-text {
-      text-align: center; } }
+      text-align: center;
+      font-size: 1.5rem; } }
 
 .cta__link {
   align-self: center;
@@ -152,11 +150,18 @@ ORDER: Base + typography > general layout + grid > page layout > components
   font-weight: 800;
   padding: 12px 40px 12px 40px;
   background-color: #293356;
-  border-radius: 20px; }
+  border-radius: 20px;
+  margin-bottom: 2rem; }
+  .cta__link:hover {
+    color: white; }
+  @media only screen and (max-width: 37.5em) {
+    .cta__link {
+      font-size: 1.5rem;
+      padding: 12px 47px 12px 47px; } }
 
 .slider__container {
   width: 100%;
-  padding-top: 3.3rem;
+  padding-top: 4.5rem;
   order: 1; }
 
 .slider {
@@ -175,7 +180,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
   /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: 0.2s;
   /* 0.2 seconds transition on hover */
-  transition: opacity 0.2s; }
+  transition: opacity 0.2s;
+  border-radius: 40px; }
 
 /* Mouse-over effects */
 .slider:hover {
@@ -187,34 +193,35 @@ ORDER: Base + typography > general layout + grid > page layout > components
   -webkit-appearance: none;
   /* Override default look */
   appearance: none;
-  width: 38px;
+  position: relative;
+  width: 40px;
   /* Set a specific slider handle width */
-  height: 38px;
+  height: 40px;
   /* Slider handle height */
   border-radius: 50%;
-  background: #10d5c2;
-  /* Green background */
-  cursor: pointer;
+  cursor: grab;
   /* Cursor on hover */
-  background-image: url(../../images/icon-slider.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  backface-visibility: hidden; }
+  background: #10d5c2 url(../../images/icon-slider.svg) center no-repeat;
+  box-shadow: 0 10.6px 43.6px -5px rgba(36, 135, 160, 0.9), 0 85px 348px -5px #0c707e; }
+  .slider::-webkit-slider-thumb:active {
+    cursor: grabbing; }
 
 .slider::-moz-range-thumb {
-  width: 38px;
+  width: 40px;
   /* Set a specific slider handle width */
-  height: 38px;
+  height: 40px;
   /* Slider handle height */
   background: #10d5c2;
   /* Green background */
-  cursor: pointer;
+  cursor: grab;
   /* Cursor on hover */
   border-radius: 50%;
   background-image: url(../../images/icon-slider.svg);
   background-repeat: no-repeat;
   background-position: center;
   backface-visibility: hidden; }
+  .slider::-moz-range-thumb:active {
+    cursor: grabbing; }
 
 /* The toggle-btn - the box around the toggle-btn__slider */
 .toggle-btn {
@@ -237,10 +244,15 @@ ORDER: Base + typography > general layout + grid > page layout > components
   left: 0;
   right: 0;
   bottom: 0;
+  width: 42px;
   background-color: #cdd7ee;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  border-radius: 32px; }
+  border-radius: 32px;
+  opacity: 0.85;
+  transition: 0.2s opacity; }
+  .toggle-btn__slider:hover {
+    opacity: 1; }
 
 .toggle-btn__slider:before {
   position: absolute;
@@ -294,6 +306,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  @media only screen and (max-height: 670px) {
+    .container {
+      height: initial; } }
 
 ul {
   list-style: none; }
@@ -312,11 +327,21 @@ body {
 
 .heading-primary {
   color: #293356;
-  font-size: 2.8rem; }
+  font-size: 2.9rem; }
 
 .heading-secondary {
   font-size: 1.5rem;
   font-weight: 600; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary--no-wrap {
+      display: none; } }
+  .heading-secondary--wrap {
+    display: none; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-secondary--wrap {
+        display: initial;
+        line-height: 2.8rem;
+        font-size: 1.7rem; } }
 
 .u-margin-top-s {
   margin-top: 1rem; }
@@ -324,9 +349,17 @@ body {
 .u-padding-left-right-m {
   padding-left: 4.5rem;
   padding-right: 4.5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .u-padding-left-right-m {
+      padding-left: 3rem;
+      padding-right: 3rem; } }
+  @media only screen and (max-width: 340px) {
+    .u-padding-left-right-m {
+      padding-left: 2rem;
+      padding-right: 2rem; } }
 
 .u-padding-top-m {
-  padding-top: 4rem; }
+  padding-top: 4.2rem; }
 
 .u-padding-bottom-m {
   padding-bottom: 4rem; }
@@ -336,6 +369,13 @@ header {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 2.9rem;
   height: 20rem;
-  background: url(../../images/pattern-circles.svg) no-repeat center; }
+  background: url(../../images/pattern-circles.svg) no-repeat center;
+  background-size: contain;
+  margin-top: 3rem; }
+  @media only screen and (max-width: 37.5em) {
+    header {
+      padding-bottom: 2rem;
+      padding-top: 3rem;
+      margin-bottom: 2rem; } }

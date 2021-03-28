@@ -2,11 +2,13 @@
   display: flex;
   flex-direction: column;
   width: 54.4rem;
-  height: 40rem;
+  height: 42.6rem;
   background-color: $color-white;
   margin: 0 auto;
   border-radius: 8px;
-  box-shadow: 0 3.4px 10px rgba(0, 0, 0, 0.035), 0 27px 80px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 3.3px 3.7px rgba(0, 0, 0, 0.009),
+    0 8.3px 9.4px rgba(0, 0, 0, 0.013), 0 16.8px 19.1px rgba(0, 0, 0, 0.017),
+    0 34.7px 39.4px rgba(0, 0, 0, 0.021), 0 95px 108px rgba(0, 0, 0, 0.03);
 
   &__main {
     display: flex;
@@ -15,7 +17,7 @@
   &__cta {
     display: flex;
     border-top: 1px solid $color-light-grayish-blue-empty;
-    padding-top: 3.5rem;
+    padding-top: 3.9rem;
     justify-content: space-between;
 
     @include respond(phone) {
@@ -25,7 +27,11 @@
   }
   @include respond(phone) {
     width: 86vw;
-    height: 60vh;
+    height: 60rem;
+  }
+  @media only screen and (max-width: 360px) {
+    width: 93vw;
+    height: 62rem;
   }
 }
 .pricing {
@@ -41,10 +47,14 @@
   }
   &__views {
     align-self: center;
-    font-size: 1.35rem;
+    font-size: 1.45rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 800;
+
+    @include respond(phone) {
+      font-size: 1.6rem;
+    }
   }
   &__price-container {
     display: flex;
@@ -56,7 +66,7 @@
   }
   &__price-amount,
   &__price-currency {
-    font-size: 3.75rem;
+    font-size: 4rem;
     font-weight: 800;
     color: $color-dark-blue;
     align-self: center;
@@ -67,24 +77,26 @@
     font-size: 1.5rem;
     margin-left: 1rem;
     font-weight: 600;
-    letter-spacing: 2pz;
+    @include respond(phone) {
+      font-size: 1.7rem;
+    }
   }
   &__footer {
-    padding-top: 5rem;
+    padding: 5.5rem 1rem 4.5rem 0;
     display: flex;
     justify-content: flex-end;
-    padding-right: 2rem;
-    gap: 1.6rem;
-    padding-bottom: 4rem;
+    gap: 1.5rem;
 
     @include respond(phone) {
       justify-content: center;
+      transform: translateX(1.9rem);
       padding-right: initial;
+      overflow: visible;
     }
   }
   &__billing {
     align-self: center;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     white-space: nowrap;
 
     &--yearly::after {
@@ -94,32 +106,15 @@
       background-color: $color-light-grayish-red;
       padding: 2px 7px 2px 7px;
       border-radius: 20px;
-      transform: translateX(-8px);
+      margin-left: 8px;
 
       @include respond(phone) {
         content: '-' attr(discount) '%';
+        margin-left: 3px;
       }
     }
-  }
-
-  &__discount {
-    align-self: center;
-    color: $color-light-red;
-    background-color: $color-light-grayish-red;
-    padding: 2px 7px 2px 7px;
-    border-radius: 20px;
-    transform: translateX(-8px);
-
-    &--long {
-      @include respond(phone) {
-        display: none;
-      }
-    }
-    &--short {
-      display: none;
-      @include respond(phone) {
-        display: inline;
-      }
+    @include respond(phone) {
+      font-size: 1.5rem;
     }
   }
 }
@@ -135,8 +130,8 @@
     }
   }
   &__features-text {
-    font-size: 1.25rem;
-    padding-left: 1.5rem;
+    font-size: 1.3rem;
+    padding-left: 1.6rem;
     position: relative;
 
     &::before {
@@ -144,11 +139,12 @@
       display: inline-block;
       font-size: inherit;
       position: absolute;
-      transform: translateX(-2rem);
+      transform: translateX(-2.3rem);
     }
 
     @include respond(phone) {
       text-align: center;
+      font-size: 1.5rem;
     }
   }
 
@@ -160,5 +156,14 @@
     padding: 12px 40px 12px 40px;
     background-color: $color-dark-blue;
     border-radius: 20px;
+    margin-bottom: 2rem;
+
+    &:hover {
+      color: $color-white;
+    }
+    @include respond(phone) {
+      font-size: 1.5rem;
+      padding: 12px 47px 12px 47px;
+    }
   }
 }

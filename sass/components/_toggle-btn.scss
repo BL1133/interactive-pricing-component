@@ -21,10 +21,17 @@
   left: 0;
   right: 0;
   bottom: 0;
+  width: 42px;
   background-color: $color-grayish-blue-toggle;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 32px;
+  opacity: 0.85;
+  transition: 0.2s opacity;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .toggle-btn__slider:before {

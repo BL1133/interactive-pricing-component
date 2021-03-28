@@ -24,7 +24,7 @@
       .attribution {
         font-size: 11px;
         text-align: center;
-        margin-top: 7rem;
+        margin-top: 3rem;
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
@@ -35,8 +35,12 @@
     <div class="container">
       <header class="header">
         <h1 class="heading-primary">Simple, traffic-based pricing</h1>
-        <h2 class="heading-secondary u-margin-top-s">
+        <h2 class="heading-secondary heading-secondary--no-wrap u-margin-top-s">
           Sign-up for our 30-day trial. No credit card required.
+        </h2>
+        <h2 class="heading-secondary heading-secondary--wrap u-margin-top-s">
+          Sign-up for our 30-day trial. <br />
+          No credit card required.
         </h2>
       </header>
       <article class="pricing-card">
@@ -87,9 +91,7 @@
             </p>
           </div>
         </div>
-        <div
-          class="pricing-card__cta u-padding-left-right-m u-padding-bottom-m"
-        >
+        <div class="pricing-card__cta u-padding-left-right-m">
           <div class="cta__features">
             <p class="cta__features-text">Unlimited websites</p>
             <p class="cta__features-text">100% data ownership</p>

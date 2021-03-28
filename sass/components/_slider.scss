@@ -1,6 +1,6 @@
 .slider__container {
   width: 100%;
-  padding-top: 3.3rem;
+  padding-top: 4.5rem;
   order: 1;
 }
 .slider {
@@ -13,6 +13,7 @@
   opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
   transition: opacity 0.2s;
+  border-radius: 40px;
 }
 
 /* Mouse-over effects */
@@ -24,25 +25,34 @@
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
-  width: 38px; /* Set a specific slider handle width */
-  height: 38px; /* Slider handle height */
+  position: relative;
+  width: 40px; /* Set a specific slider handle width */
+  height: 40px; /* Slider handle height */
   border-radius: 50%;
-  background: $color-strong-cyan; /* Green background */
-  cursor: pointer; /* Cursor on hover */
-  background-image: url(../../images/icon-slider.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  backface-visibility: hidden;
+  cursor: grab; /* Cursor on hover */
+  background: $color-strong-cyan url(../../images/icon-slider.svg) center
+    no-repeat;
+  // backface-visibility: hidden;
+  box-shadow: 0 10.6px 43.6px -5px rgba(36, 135, 160, 0.9),
+    0 85px 348px -5px rgb(12, 112, 126);
+
+  &:active {
+    cursor: grabbing;
+  }
 }
 
 .slider::-moz-range-thumb {
-  width: 38px; /* Set a specific slider handle width */
-  height: 38px; /* Slider handle height */
+  width: 40px; /* Set a specific slider handle width */
+  height: 40px; /* Slider handle height */
   background: $color-strong-cyan; /* Green background */
-  cursor: pointer; /* Cursor on hover */
+  cursor: grab; /* Cursor on hover */
   border-radius: 50%;
   background-image: url(../../images/icon-slider.svg);
   background-repeat: no-repeat;
   background-position: center;
   backface-visibility: hidden;
+
+  &:active {
+    cursor: grabbing;
+  }
 }
