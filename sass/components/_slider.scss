@@ -30,6 +30,7 @@
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
+  outline: none;
   position: relative;
   width: 40px; /* Set a specific slider handle width */
   height: 40px; /* Slider handle height */

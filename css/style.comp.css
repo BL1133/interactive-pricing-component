@@ -30,12 +30,11 @@ ORDER: Base + typography > general layout + grid > page layout > components
   .pricing-card__cta {
     display: flex;
     border-top: 1px solid #eaeefb;
-    padding-top: 3.9rem;
+    padding-top: 3.7rem;
     justify-content: space-between; }
     @media only screen and (max-width: 37.5em) {
       .pricing-card__cta {
-        flex-direction: column;
-        gap: 3rem; } }
+        flex-direction: column; } }
   @media only screen and (max-width: 37.5em) {
     .pricing-card {
       width: 86vw;
@@ -51,8 +50,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
   flex-wrap: wrap; }
   @media only screen and (max-width: 37.5em) {
     .pricing__header {
-      flex-direction: column;
-      gap: 1.5rem; } }
+      flex-direction: column; }
+      .pricing__header > * {
+        margin-bottom: 1.5rem; } }
 
 .pricing__views {
   align-self: center;
@@ -91,8 +91,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 .pricing__footer {
   padding: 5.5rem 1rem 4.5rem 0;
   display: flex;
-  justify-content: flex-end;
-  gap: 1.5rem; }
+  justify-content: flex-end; }
   @media only screen and (max-width: 37.5em) {
     .pricing__footer {
       justify-content: center;
@@ -111,7 +110,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
     background-color: #feece7;
     padding: 2px 7px 2px 7px;
     border-radius: 20px;
-    margin-left: 8px; }
+    margin-left: 5px; }
     @media only screen and (max-width: 37.5em) {
       .pricing__billing--yearly::after {
         content: "-" attr(discount) "%";
@@ -127,16 +126,17 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 .cta__features {
   display: flex;
-  flex-direction: column;
-  gap: 1rem; }
+  flex-direction: column; }
   @media only screen and (max-width: 37.5em) {
     .cta__features {
-      align-self: center; } }
+      align-self: center;
+      margin-bottom: 3rem; } }
 
 .cta__features-text {
   font-size: 1.3rem;
   padding-left: 1.6rem;
-  position: relative; }
+  position: relative;
+  margin-bottom: 1rem; }
   .cta__features-text::before {
     content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='8'%3E%3Cpath fill='none' stroke='%2310D8C4' stroke-width='2' d='M1 4.134l1.907 1.908L7.949 1'/%3E%3C/svg%3E");
     display: inline-block;
@@ -196,6 +196,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
   -webkit-appearance: none;
   /* Override default look */
   appearance: none;
+  outline: none;
   position: relative;
   width: 40px;
   /* Set a specific slider handle width */
@@ -231,7 +232,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
   position: relative;
   display: inline-block;
   width: 42px;
-  height: 22px; }
+  height: 22px;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem; }
 
 /* Hide default HTML checkbox */
 .toggle-btn input {

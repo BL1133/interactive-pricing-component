@@ -17,12 +17,11 @@
   &__cta {
     display: flex;
     border-top: 1px solid $color-light-grayish-blue-empty;
-    padding-top: 3.9rem;
+    padding-top: 3.7rem;
     justify-content: space-between;
 
     @include respond(phone) {
       flex-direction: column;
-      gap: 3rem;
     }
   }
   @include respond(phone) {
@@ -42,7 +41,9 @@
 
     @include respond(phone) {
       flex-direction: column;
-      gap: 1.5rem;
+      & > * {
+        margin-bottom: 1.5rem;
+      }
     }
   }
   &__views {
@@ -85,7 +86,6 @@
     padding: 5.5rem 1rem 4.5rem 0;
     display: flex;
     justify-content: flex-end;
-    gap: 1.5rem;
 
     @include respond(phone) {
       justify-content: center;
@@ -106,7 +106,7 @@
       background-color: $color-light-grayish-red;
       padding: 2px 7px 2px 7px;
       border-radius: 20px;
-      margin-left: 8px;
+      margin-left: 5px;
 
       @include respond(phone) {
         content: '-' attr(discount) '%';
@@ -128,16 +128,17 @@
   &__features {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
 
     @include respond(phone) {
       align-self: center;
+      margin-bottom: 3rem;
     }
   }
   &__features-text {
     font-size: 1.3rem;
     padding-left: 1.6rem;
     position: relative;
+    margin-bottom: 1rem;
 
     &::before {
       content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='8'%3E%3Cpath fill='none' stroke='%2310D8C4' stroke-width='2' d='M1 4.134l1.907 1.908L7.949 1'/%3E%3C/svg%3E");
