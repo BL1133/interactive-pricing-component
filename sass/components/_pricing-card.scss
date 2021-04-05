@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   width: 54.4rem;
-  height: 42.6rem;
+  height: 40rem;
   background-color: $color-white;
   margin: 0 auto;
   border-radius: 8px;
@@ -41,14 +41,11 @@
 
     @include respond(phone) {
       flex-direction: column;
-      & > * {
-        margin-bottom: 1.5rem;
-      }
     }
   }
   &__views {
     align-self: center;
-    font-size: 1.45rem;
+    font-size: 1.4rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 800;
@@ -83,7 +80,7 @@
     }
   }
   &__footer {
-    padding: 5.5rem 1rem 4.5rem 0;
+    padding: 5rem 1rem 3.8rem 0;
     display: flex;
     justify-content: flex-end;
 
@@ -101,6 +98,7 @@
 
     &--yearly::after {
       content: attr(discount) '% Discount';
+      font-size: 1.2rem;
       align-self: center;
       color: $color-light-red;
       background-color: $color-light-grayish-red;
@@ -135,7 +133,7 @@
     }
   }
   &__features-text {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     padding-left: 1.6rem;
     position: relative;
     margin-bottom: 1rem;

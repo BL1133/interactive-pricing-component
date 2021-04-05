@@ -3,11 +3,10 @@ header {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin-bottom: 2.9rem;
+  margin-bottom: 2rem;
   height: 20rem;
   background: url(../../images/pattern-circles.svg) no-repeat center;
-  background-size: contain;
-  margin-top: 3rem;
+  // margin-top: 3rem;
 
   @include respond(phone) {
     padding-bottom: 2rem;
