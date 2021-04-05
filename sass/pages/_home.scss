@@ -6,11 +6,9 @@ header {
   margin-bottom: 2rem;
   height: 20rem;
   background: url(../../images/pattern-circles.svg) no-repeat center;
-  // margin-top: 3rem;
 
   @include respond(phone) {
-    padding-bottom: 2rem;
-    padding-top: 3rem;
-    margin-bottom: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
   }
 }

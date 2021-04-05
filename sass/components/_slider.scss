@@ -2,6 +2,10 @@
   width: 100%;
   padding-top: 3.6rem;
   order: 1;
+
+  @include respond(phone) {
+    padding-top: 5rem;
+  }
 }
 .slider {
   -webkit-appearance: none; /* Override default CSS styles */

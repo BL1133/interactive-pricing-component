@@ -68,7 +68,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
     .pricing__price-container {
       order: 2;
       align-self: center;
-      padding-top: 3rem; } }
+      padding-top: 4rem; } }
 
 .pricing__price-amount, .pricing__price-currency {
   font-size: 4rem;
@@ -95,7 +95,8 @@ ORDER: Base + typography > general layout + grid > page layout > components
       justify-content: center;
       transform: translateX(1.9rem);
       padding-right: initial;
-      overflow: visible; } }
+      overflow: visible;
+      padding-bottom: 4.5rem; } }
 
 .pricing__billing {
   align-self: center;
@@ -167,6 +168,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
   width: 100%;
   padding-top: 3.6rem;
   order: 1; }
+  @media only screen and (max-width: 37.5em) {
+    .slider__container {
+      padding-top: 5rem; } }
 
 .slider {
   -webkit-appearance: none;
@@ -408,6 +412,5 @@ header {
   background: url(../../images/pattern-circles.svg) no-repeat center; }
   @media only screen and (max-width: 37.5em) {
     header {
-      padding-bottom: 2rem;
-      padding-top: 3rem;
-      margin-bottom: 2rem; } }
+      margin-top: 3rem;
+      margin-bottom: 4rem; } }
